@@ -84,7 +84,7 @@
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Play</a>
-                    <a href="https://laracasts.com">How to play</a>
+                    <a href="{{ route('howtoplay') }}">How to Play</a>
                 </div>
             </div>
         </div>
