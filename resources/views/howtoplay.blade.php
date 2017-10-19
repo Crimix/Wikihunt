@@ -42,6 +42,12 @@
             .title {
                 font-size: 84px;
             }
+            .box {
+		text-align: left;
+                width: 300px;
+    		padding: 25px;
+    		margin: 25px;
+            }
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
@@ -58,9 +64,32 @@
 </head>
 
 <body>
+    <div class="flex-center position-ref full-height">
+        @if (Route::has('login'))
+            <div class="top-right links">
+                @auth
+                    <a href="{{ url('/home') }}">Home</a>
+                @else
+                    <a href="{{ route('login') }}">Login</a>
+                    <a href="{{ route('register') }}">Register</a>
+                @endauth
+            </div>
+        @endif
+        <div class="content">
+	    <div class="title m-b-md">
+	        How to Play
+            </div>
 
-  <p1>You can't! </h1>
-  
+            <div class="box">
+                You can't play the game yet, you dummy!
+		But on a more serious note, the goal of the game is go from 
+		a wikipedia page to specific 'goal' wikipedia page. When 
+		you reach the 'goal' you will be scored according to how 
+		fast you reached the goal page, as well as how few clicks 
+		you used to get it.     
+            </div>
+  	</div>
+    </div>
 </body>
 
 </html>
