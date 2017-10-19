@@ -29,7 +29,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        Wikihunt
+                        {{ config('app.name', 'Wikihunt') }}
                     </a>
                 </div>
 
