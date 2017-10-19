@@ -19,11 +19,11 @@ Route::get('/howtoplay', function () {
     return view('howtoplay');
 })->name('howtoplay');
 
-Route::get('/gameSelection' function () {
+Route::get('/gameSelection', function () {
     return view('gameSelection');
 })->name('gameSelection');
 
-Route::get('/startGame' function () {
+Route::get('/startGame', function () {
     return view('startGame');
 })->name('startGame');
 

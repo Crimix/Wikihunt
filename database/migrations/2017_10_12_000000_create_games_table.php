@@ -17,7 +17,8 @@ class CreateGamesTable extends Migration
             $table->increments('id');
             $table->string('startPage');
 			$table->string('goalPage');
-            $table->foreign('gameType')->references('id')->on('gameType');
+			$table->integer('gametype')->unsigned()->nullable();
+            $table->foreign('gametype')->references('id')->on('gametype');
         });
     }
 
