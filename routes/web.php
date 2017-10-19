@@ -15,9 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('howtoplay', function () {
+Route::get('/howtoplay', function () {
     return view('howtoplay');
-});
+})->name('howtoplay');
 
 Auth::routes();
 
