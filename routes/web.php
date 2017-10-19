@@ -13,11 +13,19 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
-Route::get('howtoplay', function () {
+Route::get('/howtoplay', function () {
     return view('howtoplay');
-});
+})->name('howtoplay');
+
+Route::get('/gameSelection' function () {
+    return view('gameSelection');
+})->name('gameSelection');
+
+Route::get('/startGame' function () {
+    return view('startGame');
+})->name('startGame');
 
 Auth::routes();
 
