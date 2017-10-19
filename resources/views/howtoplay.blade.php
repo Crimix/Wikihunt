@@ -36,6 +36,14 @@
                 right: 10px;
                 top: 18px;
             }
+			
+			.top-left {
+				position: absolute;
+				left: 10px;
+				top: 18px;
+			}
+
+			
             .content {
                 text-align: center;
             }
@@ -43,10 +51,10 @@
                 font-size: 84px;
             }
             .box {
-		text-align: left;
+				text-align: left;
                 width: 300px;
-    		padding: 25px;
-    		margin: 25px;
+				padding: 25px;
+				margin: 25px;
             }
             .links > a {
                 color: #636b6f;
@@ -64,7 +72,10 @@
 </head>
 
 <body>
-    <div class="flex-center position-ref full-height">
+	<div class="top-left links">
+		<a href="{{ route('welcome') }}">Wikihunt</a> 
+	</div>
+    <div class="flex-center full-height">
         @if (Route::has('login'))
             <div class="top-right links">
                 @auth
@@ -75,20 +86,21 @@
                 @endauth
             </div>
         @endif
+
         <div class="content">
-	    <div class="title m-b-md">
-	        How to Play
-            </div>
+			<div class="title m-b-md">
+				How to Play
+			</div>
 
             <div class="box">
                 You can't play the game yet, you dummy!
-		But on a more serious note, the goal of the game is go from 
-		a wikipedia page to specific 'goal' wikipedia page. When 
-		you reach the 'goal' you will be scored according to how 
-		fast you reached the goal page, as well as how few clicks 
-		you used to get it.     
+				But on a more serious note, the goal of the game is go from 
+				a wikipedia page to specific 'goal' wikipedia page. When 
+				you reach the 'goal' you will be scored according to how 
+				fast you reached the goal page, as well as how few clicks 
+				you used to get it.     
             </div>
-  	</div>
+		</div>
     </div>
 </body>
 
