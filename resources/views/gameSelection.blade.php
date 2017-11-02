@@ -1,9 +1,18 @@
-@extends('layouts.app')
+extends('layouts.app')
 
 @section('content')
 <div class="container">
-<p> There no page </p>
+     <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Game Selection</div>
 
+                <div class="panel-body">
+					There no page     
+				</div>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection
 
