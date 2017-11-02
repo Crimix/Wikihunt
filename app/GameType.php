@@ -15,12 +15,4 @@ class GameType extends Model
     protected $fillable = [
         'gametype',
     ];
-
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-    ];
 }
