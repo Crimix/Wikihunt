@@ -21,6 +21,8 @@ Route::get('/howtoplay', function () {
 
 Auth::routes();
 
+Route::get('/home', 'GameController@gameSelection')->name('home');
+
 Route::get('/startGame', 'GameController@startGame')->name('startGame');
 
 Route::get('/gameSelection', 'GameController@gameSelection')->name('gameSelection');
