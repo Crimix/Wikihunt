@@ -20,6 +20,7 @@ class CreateScoresTable extends Migration
 			$table->integer('game_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('game_id')->references('id')->on('games');
+			$table->timestamps();
         });
     }
 
