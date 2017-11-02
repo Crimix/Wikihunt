@@ -19,11 +19,10 @@ Route::get('/howtoplay', function () {
     return view('howtoplay');
 })->name('howtoplay');
 
-Route::get('/startGame', function () {
-    return view('startGame');
-})->name('startGame');
-
 Auth::routes();
 
-Route::get('/gameSelection', 'HomeController@index')->name('gameSelection');
+Route::get('/startGame', 'GameController@startGame')->name('startGame');
 
+Route::get('/gameSelection', 'GameController@gameSelection')->name('gameSelection');
+
+Auth::routes();
