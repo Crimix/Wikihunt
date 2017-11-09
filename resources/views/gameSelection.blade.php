@@ -10,12 +10,13 @@
                 <div class="panel-body">
 					<div class="form-group">
   
-					<select class="form-control input-sm" name="">
+					<select class="form-control input-sm" name="cDropDown">
 						@foreach($categories as $cats)
 							<option value="{{$cats->id}}">{{$cats->startPage . ' -> ' . $cats->goalPage }}</option>
 						@endforeach  
 					</select>
 					</div>
+					<button type="button" onclick="window.location='{{ route("startGame/ cDropDown']") }}'">Hit Me</button>
 				</div>
 			</div>
         </div>
