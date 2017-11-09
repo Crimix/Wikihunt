@@ -5,17 +5,19 @@
      <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </div>
-                <div style="float:left;width:45%;" class="panel-heading">Game Selection</div>
-                <div style="float:right;width:45%;" class="panel-heading">Game Selection</div>
-            </div>
+                <div class="panel-heading">Game Selection</div>
+
+                <div class="panel-body">
+					<div class="form-group">
+  
+					<select class="form-control input-sm" name="">
+						@foreach($categories as $cats)
+							<option value="{{$cats->id}}">{{$cats->startPage . ' -> ' . $cats->goalPage }}</option>
+						@endforeach  
+					</select>
+					</div>
+				</div>
+			</div>
         </div>
     </div>
 </div>
