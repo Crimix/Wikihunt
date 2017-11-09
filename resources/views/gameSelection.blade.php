@@ -8,7 +8,14 @@
                 <div class="panel-heading">Game Selection</div>
 
                 <div class="panel-body">
-					There no page     
+                <div class="form-group">
+  
+  <select class="form-control input-sm" name="">
+    @foreach($categories as $cats)
+      <option value="{{$cats->id}}">{{$cats->startPage . ' -> ' . $cats->goalPage }}</option>
+    @endforeach  
+  </select>
+</div>
 				</div>
             </div>
         </div>

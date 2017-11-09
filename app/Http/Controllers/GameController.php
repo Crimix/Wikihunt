@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Game;
 use Illuminate\Http\Request;
 
 class GameController extends Controller
@@ -23,7 +24,8 @@ class GameController extends Controller
      */
     public function gameSelection()
     {
-        return view('gameSelection');
+        $categories = Game::all();
+        return view('gameSelection')->with('categories',$categories);
     }
 	
 	public function startGame()
