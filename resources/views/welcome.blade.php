@@ -25,6 +25,12 @@
                 height: 100vh;
             }
 
+            .flex-left{
+                align-items: left;
+                display: flex;
+                justify-content: left; 
+            }
+
             .flex-center {
                 align-items: center;
                 display: flex;
@@ -65,6 +71,10 @@
         </style>
     </head>
     <body>
+        <div class="flex-left">
+            <a href="https://www.google.com/">Whatever?</a>
+        </div>
+
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">

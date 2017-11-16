@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Game;
+use App\Score;
 use Illuminate\Http\Request;
 
 class GameController extends Controller
@@ -28,9 +29,11 @@ class GameController extends Controller
         return view('gameSelection')->with('categories',$categories);
     }
 	
-	public function startGame()
+	public function startGame($id)
     {
-        return view('startGame');
+        $game = Game::find($id);
+        $scores = Score::where('game_id', $id)->orderBy('score','desc')->take(5)->get();
+        return view('startGame')->with('game',$game)->with('scores',$scores);
     }
 	
 	
