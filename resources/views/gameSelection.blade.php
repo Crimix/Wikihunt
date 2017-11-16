@@ -15,7 +15,7 @@
 							<option value="{{$cats->id}}">{{$cats->startPage . ' -> ' . $cats->goalPage }}</option>
 						@endforeach  
 					</select>
-					{{ Form::submit('Click Me!') }}
+					{{ Form::submit('Play!') }}
 					{{ Form::close() }}
 					</div>
 				</div>
