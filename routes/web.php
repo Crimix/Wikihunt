@@ -23,7 +23,7 @@ Auth::routes();
 
 Route::get('/home', 'GameController@gameSelection')->name('home');
 
-Route::get('/startGame/{id}', 'GameController@startGame')->name('startGame');
+Route::post('/startGame', 'GameController@startGame')->name('startGame');
 
 Route::get('/gameSelection', 'GameController@gameSelection')->name('gameSelection');
 
