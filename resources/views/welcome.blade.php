@@ -21,8 +21,20 @@
                 margin: 0;
             }
 
+            .mid-height{
+                height: 50vh;
+            }
+
             .full-height {
                 height: 100vh;
+            }
+
+            .full-width{
+                width: 100vmax;
+            }
+
+            .mid-width{
+                width: 50vh;
             }
 
             .flex-left{
@@ -44,6 +56,29 @@
             .top-right {
                 position: absolute;
                 right: 10px;
+                top: 18px;
+            }
+
+            .top-left {
+                position: absolute;
+                left: 10px;
+                top: 18px;
+            }
+
+            .box-left {
+                position: absolute;
+                left: 180px;
+                top: 18px;
+            }
+
+            .box-right {
+                position: absolute;
+                right: 180px;
+                top: 18px;
+            }
+
+            .top-center {
+                position: absolute;
                 top: 18px;
             }
 
@@ -71,10 +106,6 @@
         </style>
     </head>
     <body>
-        <div class="flex-left">
-            <a href="https://www.google.com/">Whatever?</a>
-        </div>
-
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -91,9 +122,36 @@
                 <div class="title m-b-md">
                     Wikihunt
                 </div>
+                <div class="flex-center position-ref mid-height full-width">
+                    <div class="box-left">
+                        <p><b><font size="6">Official Challenges</font></b></p>
+                        <ul>
+                            <li>Trash to Treasure</li>
+                            <li>Cars to Hitler</li>
+                            <li>World Wonders</li>
+                        </ul>
+                    </div>
 
+                    <div class="top-center">
+                        <p><b><font size="6">Popular Challenges</font></b> </p>
+                        <ul>
+                            <li>Vermin to Sun</li>
+                            <li>Man to Asphalt</li>
+                            <li>Something to Somewhere</li>
+                        </ul>
+                    </div>
+
+                    <div class="box-right">
+                        <p><b><font size="6">New Challenges</font></b> </p>
+                        <ul>
+                            <li>Why</li>
+                            <li>Even</li>
+                            <li>Tho?</li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="links">
-                    <a href="{{ route('gameSelection') }}">Play</a>
+                    <a href="{{ route('gameSelection') }}">Create New Game</a>
                     <a href="{{ route('howtoplay') }}">How to Play</a>
                 </div>
             </div>
